@@ -9,16 +9,7 @@
 			<ul>
 			<a href="galeriaf.php">Galeria de fotos</a><br>
 			<a href="galeriav.php">Galeria de videos</a>
-				
-			</ul>
-			<h3>Novedades</h3>
-			<ul>
-			<a href="galeriaf.php">Ciencia</a><br>
-			<a href="galeriav.php">Salud</a><br>
-			<a href="galeriaf.php">Comunidad</a><br>
-			<a href="galeriaf.php">Politica</a><br>
-			<a href="galeriaf.php">Educacion</a><br>
-			</ul>		
+					
 		</article>
 	</section>
 	<?php

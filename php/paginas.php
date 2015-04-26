@@ -1,3 +1,5 @@
+<script src="../ckeditor/ckeditor.js"></script>
+<script src="../ckfinder/ckfinder.js"></script>
 <table border="1">
 	<tr>
 		<td>ID</td>
@@ -53,3 +55,18 @@
 	<input type="text" name="video" id="video" required>
 	<input type="submit" value="Agregar">
 </form>
+<br><h3>Añadir una noticia</h3>
+    <form name="carga" id="carga" action="mensaje-de-carga.php" method="post" enctype="multipart/form-data">
+       <label for="titulo">Titulo:</label><input type="text" id="titulo" name="titulo">
+       <label for="cate">Categoría:</label>
+            <select id="cate" name="cate">
+       	       <option>Sobre Comunidad LSA</option>
+       	       <option>Interés General</option>
+            </select>
+       <textarea name="contenidos" id="contenidos" cols="30" rows="10"></textarea>
+       <script>
+           CKEDITOR.replace('contenidos');
+       </script>
+       <br><input type="reset" value="Borrar todo" >
+       <input type="button" value="Agregar" onClick="if(confirm('¿Está seguro de que quiere eliminar el usuario?')){ document.carga.submit()}">
+     </form>

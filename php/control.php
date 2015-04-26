@@ -20,10 +20,10 @@
 			$navegador = new browser();
 			if( $navegador->getBrowser() == Browser::BROWSER_CHROME)
 				$result = "SELECT * FROM usuarios WHERE usuario='$usuario' AND contrasena='$pass'";
-			elseif( $navegador->getBrowser() == Browser::BROWSER_FIREFOX)
+			else if( $navegador->getBrowser() == Browser::BROWSER_FIREFOX)
 				$result = "SELECT * FROM usuarios WHERE usuario='$usuario' AND contrasena='$pass'";
-			elseif( $navegador->getBrowser() == Browser::BROWSER_OPERA)
-				$result = "SELECT * FROM usuarios WHERE `usuario`='$usuario' AND `contrasena`='$pass'";
+			else if( $navegador->getBrowser() == Browser::BROWSER_OPERA)
+				$result = "SELECT * FROM usuarios WHERE usuario='$usuario' AND contrasena='$pass'";
 			else
 				$result = "SELECT * FROM usuarios WHERE `usuario`='$usuario' AND `contrasena`='$pass'";
 			$consulta = mysqli_query($GLOBALS['conexion'],$result);
