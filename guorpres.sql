@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.12
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-04-2015 a las 07:13:40
--- Versión del servidor: 5.6.16
--- Versión de PHP: 5.5.11
+-- Tiempo de generación: 19-12-2014 a las 21:08:36
+-- Versión del servidor: 5.5.27
+-- Versión de PHP: 5.4.7
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,30 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `guorpres`
 --
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `noticias`
---
-
-CREATE TABLE IF NOT EXISTS `noticias` (
-  `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `fecha` timestamp NULL DEFAULT NULL,
-  `titulo` mediumtext CHARACTER SET latin1 COLLATE latin1_spanish_ci NOT NULL,
-  `contenido` longtext CHARACTER SET latin1 COLLATE latin1_spanish_ci NOT NULL,
-  `categoria` text CHARACTER SET latin1 COLLATE latin1_spanish_ci NOT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
-
---
--- Volcado de datos para la tabla `noticias`
---
-
-INSERT INTO `noticias` (`ID`, `fecha`, `titulo`, `contenido`, `categoria`) VALUES
-(1, '2015-04-25 23:45:00', '<h3>Primer Noticia</h3>', '<p>Hola mundo! Esta es una noticia de prueba', 'Sobre Comunidad LSA'),
-(2, '2015-04-26 01:46:37', '<h3>Segunda Prueba</h3>', '<p>Segundo insercion de contenido esta vez a trav&eacute;s del panel de administraci&oacute;n.</p>\r\n', 'InterÃ©s General'),
-(3, '2015-04-26 03:02:05', '<h3>Tercera Prueba</h3>', '<p>Siguen las pruebas jojojojojo</p>\r\n', 'Sobre Comunidad LSA');
 
 -- --------------------------------------------------------
 
@@ -92,15 +68,14 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   KEY `id` (`id`),
   KEY `nombre` (`nombre`),
   KEY `id_2` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `contrasena`, `documento`) VALUES
-(5, 'Grupo', 'administrador', 'contrasena', 12345678),
-(6, '', 'user', '1234', 0);
+(5, 'Grupo', 'administrador', 'contrasena', 12345678);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
